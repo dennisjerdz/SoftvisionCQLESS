@@ -7,4 +7,3 @@ C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLES
 C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.csproj.CoreCompileInputs.cache
 C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.dll
 C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.pdb
-C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.csproj.AssemblyReference.cache

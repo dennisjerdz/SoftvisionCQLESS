@@ -10,8 +10,15 @@ namespace CognizantQLESS.Core.Calculator
     {
         public float GetRate(bool isDiscountType, int travelsToday, float rate)
         {
-            float discount = 0;
+            float discount = GetDiscount(isDiscountType, travelsToday);
 
+            float finalRate = rate - (rate * discount);
+            return finalRate;
+        }
+
+        public float GetDiscount(bool isDiscountType, int travelsToday)
+        {
+            float discount = 0;
             if (isDiscountType)
             {
                 discount += 0.2f;
@@ -22,8 +29,7 @@ namespace CognizantQLESS.Core.Calculator
                 discount += (travelsToday * 0.03f);
             }
 
-            float finalRate = rate - (rate * discount);
-            return finalRate;
+            return discount;
         }
     }
 }

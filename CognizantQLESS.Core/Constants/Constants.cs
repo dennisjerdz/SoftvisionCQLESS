@@ -13,10 +13,11 @@ namespace CognizantQLESS.Core.Constants
         public const string ERR_INCORRECT_SERIALNUMBER = "Transaction failed. The Serial Number you entered doesn't exist.";
         public const string ERR_INSUFFICIENT_CASH = "Top up failed. Insufficient Cash.";
         public const string ERR_SAME_ORIGINDESTINATION = "Transaction failed. Origin and Destination must be different.";
-        public const string ERR_ALREADY_REGISTERED = "Registration failed. Transport card is already registered. Date: {0}";
+        public const string ERR_ALREADY_REGISTERED_OR_PAST_REGISTRATION = "Registration failed. Transport card registration date has expired or is already registered. Registration Date: {0}";
         public const string ERR_CARD_EXPIRED = "Transaction failed. Your card expired on {0}. Please purchase a new one.";
         public const string ERR_FAREMODEL_MISSING = "Transaction failed. Origin ID:{0} and Destination ID:{1} can't be found in Fare Matrix.\n Please contact an admin.";
         public const string ERR_INSUFFICIENT_LOAD = "Transaction failed. Card balance/load is only {0}, you need {1} to take this ride.";
+        public const string ERR_DISCOUNTREGISTRATION_MISSING = "Please fillout either Senior Citizen Control Number or PWD ID Number.";
         public const string ERR_GENERIC = "Transaction failed. Please contact admin.";
 
 

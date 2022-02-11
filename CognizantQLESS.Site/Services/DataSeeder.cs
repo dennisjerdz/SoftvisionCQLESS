@@ -2932,7 +2932,7 @@ namespace CognizantQLESS.Site.Services
                 new TransportCard {
                     SerialNumber = "T006",
                     LastUsedDate = null,
-                    PurchaseDate = DateTime.Now.AddYears(-2),
+                    PurchaseDate = DateTime.Now,
                     Load = 100
                 },
             };

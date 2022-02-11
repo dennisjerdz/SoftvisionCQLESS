@@ -8,5 +8,6 @@ namespace CognizantQLESS.Core.Interface
     public interface IFareCalculator
     {
         public float GetRate(bool isDiscountType, int bookingsToday, float rate);
+        public float GetDiscount(bool isDiscountType, int bookingsToday);
     }
 }

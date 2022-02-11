@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace CognizantQLESS.Core.Models.ViewModels
@@ -25,5 +26,14 @@ namespace CognizantQLESS.Core.Models.ViewModels
         [Required]
         [Display(Name = "Serial Number")]
         public string SerialNumber { get; set; }
+
+        [NotMapped]
+        public bool IsValid
+        {
+            get
+            {
+                return !(String.IsNullOrEmpty(PWDIdNumber) && String.IsNullOrEmpty(SeniorCitizenControlNumber));
+            }
+        }
     }
 }

@@ -23,9 +23,14 @@ namespace CognizantQLESS.Core.Models.ViewModels
             get { return (float)Cash - Amount; }
         }
 
-        public bool IsValid
+        public bool IsCashAmountValid
         {
             get { return (Cash >= Amount); }
+        }
+
+        public bool IsAmountValid
+        {
+            get { return (Amount >= 100 && Amount <= 10000); }
         }
     }
 }

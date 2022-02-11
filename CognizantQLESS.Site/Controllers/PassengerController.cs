@@ -49,6 +49,12 @@ namespace CognizantQLESS.Site.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DiscountRegistration([Bind("SerialNumber,SeniorCitizenControlNumber,PWDIdNumber")] DiscountRegistrationViewModel discountRegistrationModel)
         {
+            if (!discountRegistrationModel.IsValid)
+            {
+                ModelState.AddModelError("PWDIdNumber", Constants.ERR_DISCOUNTREGISTRATION_MISSING);
+                ModelState.AddModelError("SeniorCitizenControlNumber", Constants.ERR_DISCOUNTREGISTRATION_MISSING);
+            }
+
             if (ModelState.IsValid)
             {
                 var transportCard = await _context.TransportCards.FirstOrDefaultAsync(t => t.SerialNumber == discountRegistrationModel.SerialNumber);
@@ -63,7 +69,7 @@ namespace CognizantQLESS.Site.Controllers
                     TempData[Constants.UI_MESSAGE] = JsonConvert.SerializeObject(new UIMessageViewModel()
                     {
                         IsSuccess = false,
-                        Message = String.Format(Constants.ERR_ALREADY_REGISTERED, transportCard.DiscountRegistrationDate?.ToString("MM/dd/yyyy"))
+                        Message = String.Format(Constants.ERR_ALREADY_REGISTERED_OR_PAST_REGISTRATION, transportCard.DiscountRegistrationDate?.ToString("MM/dd/yyyy") ?? "Empty")
                     });
 
                     return RedirectToAction("DiscountRegistration");
@@ -138,7 +144,7 @@ namespace CognizantQLESS.Site.Controllers
             {
                 TransportCard transportCard = await _context.TransportCards.FirstOrDefaultAsync(t => t.SerialNumber == loadViewModel.SerialNumber);
 
-                if (!loadViewModel.IsValid)
+                if (!loadViewModel.IsCashAmountValid)
                 {
                     ModelState.AddModelError("Cash", Constants.ERR_INSUFFICIENT_CASH);
                     return View(loadViewModel);
