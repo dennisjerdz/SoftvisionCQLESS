@@ -1,0 +1,79 @@
+﻿@model CognizantQLESS.Core.Models.ViewModels.DiscountRegistrationViewModel
+@using CognizantQLESS.Core.Constants
+
+@{
+    ViewData["Title"] = "Discount Registration";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="window-wrapper">
+            <h4 class="window-heading">Discount Registration</h4>
+
+            <form asp-action="DiscountRegistration">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="SerialNumber" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="SerialNumber" class="text-danger"></span>
+                    <input asp-for="SerialNumber" class="form-control" style="text-transform:uppercase" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeniorCitizenControlNumber" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="SeniorCitizenControlNumber" class="text-danger"></span>
+                    <input asp-for="SeniorCitizenControlNumber" class="form-control" hidden />
+                    <input id="Masked_SeniorCitizenControlNumber" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="PWDIdNumber" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="PWDIdNumber" class="text-danger"></span>
+                    <input asp-for="PWDIdNumber" class="form-control" hidden />
+                    <input id="Masked_PWDIdNumber" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary float-right" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-mask/jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            @{ 
+                string seniorCitizenControlNumberUI = Model?.SeniorCitizenControlNumber ?? "";
+                string pwdIdNumberUI = Model?.PWDIdNumber ?? "";
+            }
+
+            var seniorCitizenControlNumber = "@seniorCitizenControlNumberUI";
+            var pwdIdNumber = "@pwdIdNumberUI";
+
+            $("#Masked_SeniorCitizenControlNumber").val(seniorCitizenControlNumber);
+            $("#Masked_PWDIdNumber").val(pwdIdNumber);
+
+            $("#Masked_SeniorCitizenControlNumber").mask("00-0000-0000");
+            $("#Masked_PWDIdNumber").mask("0000-0000-0000");
+
+            $("#Masked_SeniorCitizenControlNumber").keyup(function () {
+                var newValue = $(this).val().replace(/-/g, "");
+                $("#SeniorCitizenControlNumber").val(newValue);
+            });
+
+            $("#Masked_PWDIdNumber").keyup(function () {
+                var newValue = $(this).val().replace(/-/g, "");
+                $("#PWDIdNumber").val(newValue);
+            });
+        })
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

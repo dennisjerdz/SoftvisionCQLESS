@@ -1,0 +1,10 @@
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\bin\Debug\netcoreapp3.1\CognizantQLESS.Core.deps.json
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\bin\Debug\netcoreapp3.1\CognizantQLESS.Core.dll
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\bin\Debug\netcoreapp3.1\CognizantQLESS.Core.pdb
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.AssemblyInfoInputs.cache
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.AssemblyInfo.cs
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.csproj.CoreCompileInputs.cache
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.dll
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.pdb
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Core\obj\Debug\netcoreapp3.1\CognizantQLESS.Core.csproj.AssemblyReference.cache

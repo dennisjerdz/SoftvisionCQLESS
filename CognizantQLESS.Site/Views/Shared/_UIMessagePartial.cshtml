@@ -1,0 +1,14 @@
+﻿@model CognizantQLESS.Core.Models.ViewModels.UIMessageViewModel
+
+@{       
+    string alertType = (Model.IsSuccess) ? "alert-success" : "alert-danger";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="alert @alertType">
+            @Model.Message
+        </div>
+    </div>
+    <br />
+</div> 

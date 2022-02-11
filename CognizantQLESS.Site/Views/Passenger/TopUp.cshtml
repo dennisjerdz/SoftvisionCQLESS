@@ -1,0 +1,44 @@
+﻿@model CognizantQLESS.Core.Models.ViewModels.LoadViewModel
+@using CognizantQLESS.Core.Constants
+
+@{
+    ViewData["Title"] = "Top Up";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="window-wrapper">
+            <h4 class="window-heading">Top Up</h4>
+
+            <form asp-action="TopUp">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="SerialNumber" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="SerialNumber" class="text-danger"></span>
+                    <input asp-for="SerialNumber" class="form-control" style="text-transform:uppercase" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                    <input asp-for="Amount" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cash" class="control-label"></label>
+                    <br />
+                    <span asp-validation-for="Cash" class="text-danger"></span>
+                    <input asp-for="Cash" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary float-right" />
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

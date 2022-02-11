@@ -1,0 +1,16 @@
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.DAL.deps.json
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.DAL.runtimeconfig.json
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.DAL.runtimeconfig.dev.json
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.DAL.dll
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.DAL.pdb
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.Core.dll
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\bin\Debug\netcoreapp3.1\CognizantQLESS.Core.pdb
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.csproj.AssemblyReference.cache
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.AssemblyInfoInputs.cache
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.AssemblyInfo.cs
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.csproj.CopyComplete
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.dll
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.pdb
+C:\Users\YZPC\Documents\Visual Studio 2019\Projects\CognizantQLESS\CognizantQLESS.Data\obj\Debug\netcoreapp3.1\CognizantQLESS.DAL.genruntimeconfig.cache

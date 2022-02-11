@@ -1,0 +1,153 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/*
+    #5c068c
+    #c800a1
+    #ff8f1c
+*/
+
+.window-wrapper dl dt {
+    margin-bottom: 30px !important;
+    border-bottom: 0.5px #ff8f1c !important;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-weight: 900;
+    font-size: 1.6em;
+    color: #c800a1 !important;
+}
+
+.navbar {
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+
+.navbar-nav .nav-link{
+    font-size:1.1em;
+}
+
+.alert{
+    border:3px !important;
+    border-radius:0px;
+    padding:1.2em !important;
+    font-size:1.2em !important;
+    margin-bottom:25px !important;
+    font-weight:600 !important;
+}
+
+.form-control {
+    border-radius: 0px !important;
+    border: none !important;
+    border-bottom: 1px solid silver !important;
+    background-color: transparent !important;
+    color: #5c068c;
+    margin-bottom: 40px;
+    font-size:1.2em !important;
+}
+
+.navbar-toggler, .navbar-toggler * {
+    color: #5c068c !important;
+}
+
+.form-control:active, .form-control:focus {
+    color: #5c068c !important;
+}
+
+.alert *{
+    font-weight:600;
+}
+
+.window-heading {
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #5c068c;
+}
+
+.window-wrapper {
+    padding: 20px 30px 40px 30px;
+    border-radius: 0px;
+    border: 0.5px solid #c800a1;
+    overflow:hidden;
+}
+
+.btn {
+    margin-top: 10px;
+    line-height: 40px;
+    padding: 10px 40px;
+    border-radius: 0px;
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.control-label {
+    margin-bottom:0px !important;
+}
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}

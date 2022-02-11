@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CognizantQLESS.Core.Models.TransportCard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="window-wrapper">
+            <h4 style="margin-bottom:0px !important;" class="window-heading">Transport Cards</h4>
+            <form asp-action="TransportCardCreate">
+                <p>
+                    <button style="margin-bottom:40px !important;" class="btn btn-xs btn-success" type="submit">Create New</button>
+                </p>
+            </form>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SerialNumber)
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Load)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PurchaseDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ExpirationDate)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SerialNumber)
+                        </td>
+                        <td>
+                            @if (item.IsDiscountType)
+                            {
+                                <span class="text-success">Discount</span>
+                            }
+                            else
+                            {
+                                <span class="text-primary">Regular</span>
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Load)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpirationDate)
+                        </td>
+                        <td>
+                            <a asp-action="TransportCardDetails" asp-route-id="@item.TransportCardId">Details</a>
+                            &nbsp;
+                            <!--
+                                <a asp-action="TransportCardDelete" asp-route-id="@item.TransportCardId">Delete</a>
+                            -->
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
