@@ -177,7 +177,7 @@ namespace CognizantQLESS.Site.Services
                 var effectiveDate = DateTime.Now.AddYears(-5);
                 List<StationSeedViewModel> stations = _context.Stations.Select(s => new StationSeedViewModel { Name = s.Name, StationId = s.StationId }).ToList();
 
-                List<Fare> fares = new List<Fare>() { 
+                List<Fare> faresL1 = new List<Fare>() { 
                     // baclaran
                     new Fare
                     {
@@ -2872,7 +2872,803 @@ namespace CognizantQLESS.Site.Services
                     }
                 };
 
-                _context.Fares.AddRange(fares);
+                List<Fare> faresL2 = new List<Fare>()
+                {
+                    // Recto
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 22
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 24
+                    },
+
+                    // Legarda
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 20
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 23
+                    },
+
+                    // Pureza
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 20
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 22
+                    },
+
+                    // V. Mapa
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+
+                    // J. RUIZ
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+
+                    // Gilmore
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+
+                    // Betty-Go
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+
+                    // Cubao
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+
+                    // Anonas
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 20
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+
+                    // Katipunan
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 22
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 20
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 16
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 12
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    },
+
+                    // Santolan
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Recto").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 24
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Legarda").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 23
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Pureza").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 22
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "V. Mapa").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 21
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "J. RUIZ").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 19
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Gilmore").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 18
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Betty-Go").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 17
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Cubao").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 15
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Anonas").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 14
+                    },
+                    new Fare
+                    {
+                        OriginStationId = stations.FirstOrDefault(s=>s.Name == "Santolan").StationId,
+                        DestinationStationId = stations.FirstOrDefault(s=>s.Name == "Katipunan").StationId,
+                        EffectiveDate = effectiveDate,
+                        Rate = 13
+                    }
+                };
+
+                _context.Fares.AddRange(faresL1);
+                _context.Fares.AddRange(faresL2);
                 _context.SaveChanges();
             }
         }
@@ -2885,8 +3681,8 @@ namespace CognizantQLESS.Site.Services
                 // expired unregistered
                 new TransportCard {
                     SerialNumber = "T001",
-                    LastUsedDate = DateTime.Now.AddYears(-1),
-                    PurchaseDate = DateTime.Now.AddYears(-2),
+                    LastUsedDate = DateTime.Now.AddYears(-6),
+                    PurchaseDate = DateTime.Now.AddYears(-5),
                     Load = 100
                 },
 

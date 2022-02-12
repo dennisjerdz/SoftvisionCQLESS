@@ -20,7 +20,6 @@ namespace CognizantQLESS.Core.Constants
         public const string ERR_DISCOUNTREGISTRATION_MISSING = "Please fillout either Senior Citizen Control Number or PWD ID Number.";
         public const string ERR_GENERIC = "Transaction failed. Please contact admin.";
 
-
         public const string SUCCESS_DISCOUNTREGISTRATION = "Discount Registration successful. Your travels will now have 20% discount.";
         public const string SUCCESS_TOPUP = "Top up successful. Your change is {0}. Your new balance is {1}.";
         public const string SUCCESS_TRAVEL = "Transaction successful. Your new balance is {0}.";
@@ -34,5 +33,40 @@ namespace CognizantQLESS.Core.Constants
         public const string CACHE_FARES = "CACHE_FARES";
         public const string CACHE_STATIONLINES = "CACHE_STATIONLINES";
         public const string CACHE_STATIONS = "CACHE_STATIONS";
+
+        #region Station Names
+        public const string STATION_BACLARAN = "Baclaran";
+        public const string STATION_EDSA = "Edsa";
+        public const string STATION_LIBERTAD = "Libertad";
+        public const string STATION_GILPUYAT = "Gil Puyat";
+        public const string STATION_VITOCRUZ = "Vito Cruz";
+        public const string STATION_QUIRINO = "Quirino";
+        public const string STATION_PEDROGIL = "Pedro Gil";
+        public const string STATION_UNAVENUE = "U.N. Avenue";
+        public const string STATION_CENTRAL = "Central Terminal";
+        public const string STATION_CARRIEDO = "Carriedo";
+        public const string STATION_DOROTEOJ = "Doroteo Jose";
+        public const string STATION_BAMBANG = "Bambang";
+        public const string STATION_TAYUMAN = "Tayuman";
+        public const string STATION_BLUMENTRITT = "Blumentritt";
+        public const string STATION_ABADSANTOS = "Abad Santos";
+        public const string STATION_RPAPA = "R. Papa";
+        public const string STATION_5THAVENUE = "5th Avenue";
+        public const string STATION_MONUMENTO = "Monumento";
+        public const string STATION_BALINTAWAK = "Balintawak";
+        public const string STATION_ROOSEVELT = "Roosevelt";
+
+        public const string STATION_RECTO = "Recto";
+        public const string STATION_LEGARDA = "Legarda";
+        public const string STATION_PUREZA = "Pureza";
+        public const string STATION_VMAPA = "V. Mapa";
+        public const string STATION_JRUIZ = "J. Ruiz";
+        public const string STATION_GILMORE = "Gilmore";
+        public const string STATION_BETTYGO = "Betty-Go";
+        public const string STATION_CUBAO = "Cubao";
+        public const string STATION_ANONAS = "Anonas";
+        public const string STATION_KATIPUNAN = "Katipunan";
+        public const string STATION_SANTOLAN = "Santolan";
+        #endregion
     }
 }
