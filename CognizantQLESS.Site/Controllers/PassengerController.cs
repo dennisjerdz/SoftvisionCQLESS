@@ -280,6 +280,7 @@ namespace CognizantQLESS.Site.Controllers
                 else
                 {
                     transportCard.Load = transportCard.Load - finalRate;
+                    transportCard.LastUsedDate = DateTime.Now;
 
                     Travel newTravelHistory = new Travel() {
                         TransportCardId = transportCard.TransportCardId,
